@@ -1,0 +1,68 @@
+{
+  "name": "biojs-vis-events",
+  "description": "",
+  "version": "0.1.0",
+  "homepage": "https://github.com/marcoantonioburgin/biojs-vis-events",
+  "author": {
+    "name": "marcoburgin",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcoantonioburgin/biojs-vis-events.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcoantonioburgin/biojs-vis-events/issues"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "https://github.com/marcoantonioburgin/biojs-vis-events/blob/master/LICENSE"
+    }
+  ],
+  "main": "lib/index.js",
+  "style": "css/*.css", 
+  "scripts": {
+		"test": "gulp test",
+		"build": "gulp build",
+		"build-browser": "gulp build-browser",
+		"build-browser-min": "gulp build-browser-gzip",
+		"install": "gulp build && npm run css",
+		"watch": "gulp watch",
+		"test-watch": "gulp test-watch",
+		"w": "prunner \"npm run sniper\" \"npm run watch\" \"npm run watch-css\"",
+		"sniper": "sniper .",
+		"css": "parcelify ./ -c build/bundle.css",
+		"watch-css": "parcelify -w ./ -c build/bundle.css --loglevel verbose"
+  },
+  "dependencies": {},
+  "devDependencies": {
+		"mkdirp": "^0.5.0",
+		"browserify": "6.x",
+		"sniper": "0.x",
+		"watchify": "^1.0.6",
+		"prunner": "1.x",
+		"parcelify": "0.x",
+		"gulp-jshint": "1.x",
+		"chai": "1.x",
+		"mocha": "1.x",
+		"gulp-mocha": "1.x",
+		"gulp-mocha-phantomjs": "0.x",
+		"del": "^0.1.3",
+		"gulp": "^3.8.8",
+		"gulp-chmod": "^1.1.1",
+		"gulp-gzip": "^0.0.8",
+		"gulp-rename": "^1.2.0",
+		"gulp-streamify": "^0.0.5",
+		"gulp-uglify": "^1.0.1",
+		"gulp-util": "^3.0.1",
+		"vinyl-source-stream": "^1.0.0"
+  }, 
+  "sniper": {
+    "js": [ "/build/events.js"],
+    "css": ["/build/bundle.css"], 
+    "snippets": ["examples"],
+    "first": "index"
+   }, 
+  "keywords": ["biojs"]
+}
