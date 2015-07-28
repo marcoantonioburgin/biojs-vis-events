@@ -173,7 +173,7 @@ switch (sizeNumber) {
     case 2:      
         
         var row = jQuery('<div><div class="iAnnEventTitleOdd"><a href="'+cols['link']+'" taget="_blank">'+cols['title']+'</a></div><ul class="blockInformation"><li><i class="fa fa-calendar-o"></i><span class="date">'+date.substring(0,15)+'</span><i class="fa fa-map-marker"></i><span class="location">'+cols['country']+' - '+cols['provider']+'</span></li></ul></div>');
-        $(".iannEventList").css({width: "20%"});   
+        $(".iannEventList").css({width: "17%"});   
         break;
 
 
